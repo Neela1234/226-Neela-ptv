@@ -1,0 +1,67 @@
+ problem statement:create an department class inherit employee class
+DEPARTMENT.CS
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApp17
+{
+    class Department
+    {
+        public Department()
+        {
+            Console.WriteLine("Department constructor");
+        }
+        public void DepartmentName()
+        {
+            Console.WriteLine("Department name is ITDepartment");
+        }
+        public  void NumberOfDepartments()
+        {
+            Console.WriteLine("there are 5 departments");
+        }
+        public virtual void GetDepartmentDetails()
+        {
+            Console.WriteLine("Department name is ITDepartment and there are 5 Departments");
+        }
+
+    }
+    class Employee : Department
+    {
+        public Employee()
+        {
+            Console.WriteLine("Employee constructor is created");
+        }
+        public void EmpFirstName()
+        {
+            Console.WriteLine("firstName is neela");
+        }
+        public void  EmpLastName()
+        {
+            Console.WriteLine("LastName  is ptv");
+
+        }
+        public override void GetDepartmentDetails()
+        {
+            Console.WriteLine("Department name is ITDepartment and there are 5 Departments");
+        }
+
+    };
+    }
+PROGRAM.CS
+
+using System;
+
+namespace ConsoleApp17
+{
+    class Program
+    {
+        static void Main()
+        {
+            Department d2 = new Employee();
+            d2.DepartmentName();
+            d2.NumberOfDepartments();
+            d2.GetDepartmentDetails();
+        }
+    }
+}
